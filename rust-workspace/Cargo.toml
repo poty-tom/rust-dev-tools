@@ -1,0 +1,17 @@
+[package]
+name = "rust-workspace"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = ["member1", "member2", "member3"]
+
+[workspace.dependencies]
+member1 = { path = "./member1" }
+member2 = { path = "./member2" }
+member3 = { path = "./member3" }
+
+[dependencies]
+member1.workspace = true
+member2.workspace = true
+member3.workspace = true
